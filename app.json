@@ -1,13 +1,31 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/list/list",
+    "pages/article/article"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
-    "navigationBarTextStyle": "black"
+    "navigationBarTitleText": "千古思想家",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/images/tab/tabbar_icon_index_default.png",
+        "selectedIconPath": "/images/tab/tabbar_icon_index_active.png"
+      },
+      {
+        "pagePath": "pages/list/list",
+        "text": "专栏",
+        "iconPath": "/images/tab/tabbar_icon_shortcut_default.png",
+        "selectedIconPath": "/images/tab/tabbar_icon_shortcut_active.png"
+      }
+    ]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json",
