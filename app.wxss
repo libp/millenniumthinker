@@ -9,4 +9,5 @@
   box-sizing: border-box;
   background-color:"#ededed";
 }
+
 @import 'app-wxa-auto-dark.wxss' 
