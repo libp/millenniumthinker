@@ -1,0 +1,21 @@
+<!--pages/list/list.wxml-->
+<view class="container">
+  <div class="head_space"></div>
+  <view class="special_column" bindtap="preview" data-field="7">
+    <view class="column_head" >
+      <view class="head_left">毛泽东思想</view>
+      <view class="head_right">
+        <navigator url='/pages/list/list?id=7'>全部 ></navigator>
+      </view>
+    </view>
+  </view>
+  <view class="special_column" bindtap="preview" data-field="8">
+    <view class="column_head">
+      <view class="head_left">任正非思想</view>
+      <view class="head_right">
+        <navigator url='/pages/list/list?id=8'>全部 ></navigator>
+      </view>
+    </view>
+  </view>
+</view>
+

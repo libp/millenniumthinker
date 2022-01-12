@@ -58,4 +58,3 @@ p {
   border-bottom:1px solid  #cccccc;
 }
 
-@import 'index-wxa-auto-dark.wxss'

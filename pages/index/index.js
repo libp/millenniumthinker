@@ -74,8 +74,13 @@ Page({
   },
   getluckyday:function() {
     let articleIdList = wx.getStorageSync('articleIdList');
-    let randID = Math.ceil(Math.random()*articleIdList.length)
-    return articleIdList[randID]
+    if(articleIdList.length>0){
+      let randID = Math.ceil(Math.random()*articleIdList.length)
+      return articleIdList[randID]
+    }else{
+      //缓存数据被清除，使用推荐的文章ID
+      return this.data.id
+    }    
   },
   onPullDownRefresh: function () {
     this.getContentByID(this.getluckyday());
@@ -113,7 +118,7 @@ Page({
         that.setData({
           title: res.data.title.rendered,
           // author: res.data.author,
-          article: res.data.content.rendered.replace(/<p/g, '<p style="margin:0% 0% 5% 0%;" ').replace(/<h2/g, '<h2 style="display:none" ').replace(/<h1/g, '<h1 style="display:none" '),
+          article: res.data.content.rendered.replace(/<p/g, '<p style="margin:0% 0% 5% 0%;" ').replace(/<h2/g, '<h2 style="display:none" ').replace(/<h1/g, '<h1 style="display:none" ').replace(/<br/g, '<p style="margin:0% 0% 5% 0%;" '),
           publish_date: res.data.date,
           id: res.data.id,
         });

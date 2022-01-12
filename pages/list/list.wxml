@@ -1,2 +1,14 @@
 <!--pages/list/list.wxml-->
-<text>pages/list/list.wxml</text>
+<view class="container">
+  <div class="head_space">11</div>
+  <view class="special_column">
+    <view class="article_list" wx:for="{{tableData}}" wx:key="id" >
+      <view class="article_list_left" bindtap="preview" data-field="{{item.id}}">
+        <view class="title">
+          {{item.title}}
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+

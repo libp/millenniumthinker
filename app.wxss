@@ -10,4 +10,3 @@
   background-color:"#ededed";
 }
 
-@import 'app-wxa-auto-dark.wxss' 

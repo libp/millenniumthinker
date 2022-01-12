@@ -2,12 +2,13 @@
   "pages": [
     "pages/index/index",
     "pages/list/list",
-    "pages/article/article"
+    "pages/article/article",
+    "pages/column/column"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "千古思想家",
+    "navigationBarTitleText": "千年思想家",
     "navigationBarTextStyle": "black",
     "enablePullDownRefresh": true
   },
@@ -20,7 +21,7 @@
         "selectedIconPath": "/images/tab/tabbar_icon_index_active.png"
       },
       {
-        "pagePath": "pages/list/list",
+        "pagePath": "pages/column/column",
         "text": "专栏",
         "iconPath": "/images/tab/tabbar_icon_shortcut_default.png",
         "selectedIconPath": "/images/tab/tabbar_icon_shortcut_active.png"
