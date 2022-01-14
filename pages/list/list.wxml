@@ -1,14 +1,16 @@
 <!--pages/list/list.wxml-->
 <view class="container">
-  <div class="head_space">11</div>
+  <view class="head_space"></view>
   <view class="special_column">
-    <view class="article_list" wx:for="{{tableData}}" wx:key="id" >
-      <view class="article_list_left" bindtap="preview" data-field="{{item.id}}">
-        <view class="title">
-          {{item.title}}
-        </view>
+    <view class="article_list" wx:for="{{articleList}}" wx:key="id" >
+      <view  bindtap="preview" data-field="{{item.id}}">
+        {{item.title.rendered}}
       </view>
     </view>
   </view>
+  <view class="end" hidden="{{!end}}">
+    暂无更多内容
+  </view>
+  <view class="footer_space"></view>
 </view>
 

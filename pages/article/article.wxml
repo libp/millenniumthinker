@@ -1,2 +1,19 @@
-<!--pages/article/article.wxml-->
-<text>pages/article/article.wxml</text>
+<view class="container">
+  <view class="title">
+    {{title}}
+  </view>
+  <view class="author">
+    {{author}}
+  </view>
+  <view class="article">
+    <rich-text nodes="{{article}}"></rich-text>
+  </view>
+
+
+  <view class="operation">
+    <button open-type="share" size="default" type="primary" class="operation-button" > 分享 </button>
+  </view>
+  <view class="about">
+    <!-- <navigator url='/pages/about/about'>关于</navigator> -->
+  </view>
+</view>

@@ -16,6 +16,6 @@
     <button bindtap="nextRandom" size="default" type="default" class="operation-button"> 下一篇 </button>
   </view>
   <view class="about">
-    <!-- <navigator url='/pages/about/about'>关于古诗文Lite</navigator> -->
+    <!-- <navigator url='/pages/about/about'>关于</navigator> -->
   </view>
 </view>

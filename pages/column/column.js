@@ -15,7 +15,7 @@ Page({
 
   },
   preview: function(e){
-    console.log(1)
+    // console.log(e.currentTarget.dataset.field)
     wx.navigateTo({
       url: '/pages/list/list'+'?id='+e.currentTarget.dataset.field,
     })
