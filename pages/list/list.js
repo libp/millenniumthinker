@@ -68,7 +68,7 @@ Page({
   },
 
   getarticleList: function(page,categories){
-    console.log(page,categories)
+    // console.log(page,categories)
     let that = this;
     wx.request({
       url: 'https://www.nichuiniu.cn/wp-json/wp/v2/posts?per_page=20&orderby=id&order=asc&_fields=id,title&page=' + page + '&categories=' + categories,
@@ -79,7 +79,7 @@ Page({
       success: function (res) {
         that.data.total = parseInt(res.header['X-WP-TotalPages'])
         that.data.articleList = that.data.articleList.concat(res.data)
-        console.log(that.data.articleList)
+        // console.log(that.data.articleList)
         that.setData({
           articleList: that.data.articleList,
           page: that.data.page + 1
