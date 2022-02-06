@@ -65,8 +65,13 @@ Page({
           that.data.articleIdList.sort(function(a, b){return a - b})
           // 根据今天的日期推荐一篇文章
           let d = new Date();
-          console.log(d.getTime())
-          let luckyday = parseInt(d.getTime()/1000/24/60/60)%that.data.articleIdList.length
+          // console.log(d.getTime())
+          // let luckyday = parseInt(d.getTime()/1000/24/60/60)%that.data.articleIdList.length
+
+          // 19029 2022 年 2 月 6 日作为锚定日期，从第一篇开始依次循环推荐
+          console.log(d.getTime()/1000/24/60/60-19029+0.333333)
+          let luckyday = parseInt(d.getTime()/1000/24/60/60-19029+0.333333)%that.data.articleIdList.length
+
           that.getContentByID(that.data.articleIdList[luckyday]);
         }
       }
